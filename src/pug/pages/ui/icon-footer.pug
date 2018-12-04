@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Иконки подвала - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Иконки подвала
+			.section-ui.dark-bg
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-vk')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-twitter')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-youtube')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-instagram')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-facebook-f')
+			pre.
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-facebook-f')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-twitter')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-youtube')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-instagram')
+				+icon-font('https://www.youtube.com/?gl=RU&hl=ru', 'fab fa-facebook-f')
+			
+			.title mixins/_icons.pug
+			pre.
+				mixin icon-font(link, name)
+					a(href= link)
+						span.social-icon
+							i(class= name)
